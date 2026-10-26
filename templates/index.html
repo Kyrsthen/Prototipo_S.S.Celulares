@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Celulares</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">SS <span>Celulares</span></div>
+        <nav>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#produtos">Produtos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="etiqueta">Tecnologia e conectividade</p>
+                <h1>Encontre o produto ideal para você.</h1>
+                <p>Conheça a SS Celulares e confira nossos produtos.</p>
+                <a class="botao" href="#produtos">Ver produtos</a>
+            </div>
+            <div class="logo-grande">SS<br><small>CELULARES</small></div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <h2>Sobre a SS Celulares</h2>
+            <p>
+                Este espaço será usado para apresentar a história da loja,
+                seus serviços e os diferenciais da SS Celulares.
+            </p>
+        </section>
+
+        <section id="produtos" class="secao">
+            <h2>Produtos</h2>
+
+            <form class="pesquisa" method="GET">
+                <input
+                    type="search"
+                    name="pesquisa"
+                    placeholder="Pesquisar produto..."
+                    value="{{ pesquisa }}"
+                >
+                <button type="submit">Pesquisar</button>
+            </form>
+
+            <div class="produtos">
+                {% for produto in produtos %}
+                <article class="produto">
+                    {% if produto["imagem"] %}
+                        <img src="{{ produto['imagem'] }}" alt="{{ produto['nome'] }}">
+                    {% else %}
+                        <div class="imagem-placeholder">📱</div>
+                    {% endif %}
+                    <h3>{{ produto["nome"] }}</h3>
+                    <p>{{ produto["descricao"] or "Descrição em breve." }}</p>
+                    <strong>R$ {{ "%.2f"|format(produto["preco"]) }}</strong>
+                </article>
+                {% else %}
+                <p>Nenhum produto cadastrado ainda.</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 SS Celulares. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
