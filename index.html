@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça a SS Celulares: smartphones, acessórios e tecnologia para o seu dia a dia.">
+  <meta name="theme-color" content="#101827">
+  <title>SS Celulares | Tecnologia para você</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/catalogo.js" defer></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container barra">
+      <a class="marca" href="#inicio" aria-label="SS Celulares — início">
+        <span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span>
+      </a>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+      </nav>
+      <a class="botao botao-contorno" href="#produtos">Explorar catálogo <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="container hero-grade">
+        <div class="hero-texto">
+          <p class="sobretitulo"><span class="ponto"></span> TECNOLOGIA QUE CONECTA</p>
+          <h1>Seu próximo celular começa <span>aqui.</span></h1>
+          <p class="hero-descricao">Descubra opções para acompanhar sua rotina, registrar seus melhores momentos e ficar sempre conectado.</p>
+          <div class="hero-acoes">
+            <a class="botao botao-principal" href="#produtos">Ver catálogo <span aria-hidden="true">→</span></a>
+            <a class="link-simples" href="#sobre">Conheça a loja</a>
+          </div>
+          <div class="hero-nota"><span class="nota-icone" aria-hidden="true">✦</span><span><strong>Escolha com confiança</strong><br>Informação clara para comparar opções.</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Ilustração decorativa de smartphone">
+          <div class="orb orb-um"></div><div class="orb orb-dois"></div>
+          <div class="telefone">
+            <div class="telefone-ilha"></div>
+            <div class="telefone-tela"><span class="tela-mini">SS / CELULARES</span><div class="tela-circulo"></div><strong>Conecte-se<br>ao que importa.</strong><span class="tela-linha"></span></div>
+          </div>
+          <div class="selo selo-topo"><span>✦</span> Novidades em tecnologia</div>
+          <div class="selo selo-base"><span class="selo-ponto"></span> Seu mundo, conectado</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="beneficios" aria-label="Diferenciais">
+      <div class="container beneficios-grade">
+        <div><span class="beneficio-icone">⌕</span><span><strong>Compare opções</strong><small>Encontre o que combina com você</small></span></div>
+        <div><span class="beneficio-icone">◇</span><span><strong>Design e tecnologia</strong><small>Opções para diferentes rotinas</small></span></div>
+        <div><span class="beneficio-icone">♡</span><span><strong>Atendimento próximo</strong><small>Conte com orientação na escolha</small></span></div>
+      </div>
+    </section>
+
+    <section class="secao sobre" id="sobre">
+      <div class="container sobre-grade">
+        <div><p class="sobretitulo">SOBRE A SS CELULARES</p><h2>Tecnologia mais perto de você.</h2></div>
+        <div><p>Queremos ajudar você a encontrar dispositivos e acessórios que façam sentido para o seu dia a dia. Explore o catálogo demonstrativo e compare as informações de cada opção.</p><a class="link-simples" href="#produtos">Ir para os produtos <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="secao catalogo" id="produtos">
+      <div class="container">
+        <div class="catalogo-cabecalho"><div><p class="sobretitulo">NOSSO CATÁLOGO</p><h2>Encontre seu próximo <span>favorito.</span></h2><p class="texto-secundario">Use a busca ou filtre por categoria para explorar as opções.</p></div><span class="contador" id="contador-produtos">6 opções demonstrativas</span></div>
+        <div class="filtros">
+          <label class="campo-busca"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar por nome..." aria-label="Buscar produtos por nome"></label>
+          <div class="categorias" role="group" aria-label="Filtrar por categoria">
+            <button class="filtro ativo" type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-categoria="Premium" aria-pressed="false">Premium</button>
+            <button class="filtro" type="button" data-categoria="Intermediário" aria-pressed="false">Intermediários</button>
+            <button class="filtro" type="button" data-categoria="Acessório" aria-pressed="false">Acessórios</button>
+          </div>
+        </div>
+        <div class="produtos" id="lista-produtos" aria-live="polite"></div>
+        <p class="aviso-catalogo">Catálogo demonstrativo: nomes, imagens e preços de exemplo. Atualize os dados antes de usar o site como loja real.</p>
+      </div>
+    </section>
+
+    <section class="chamada">
+      <div class="container chamada-conteudo"><div><p class="sobretitulo">A ESCOLHA É SUA</p><h2>Conecte-se com o que vem pela frente.</h2><p>Explore as opções e descubra qual combina com suas necessidades.</p></div><a class="botao botao-claro" href="#produtos">Explorar catálogo <span aria-hidden="true">→</span></a></div>
+    </section>
+  </main>
+
+  <footer class="rodape"><div class="container rodape-conteudo"><a class="marca marca-rodape" href="#inicio"><span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span></a><p>© <span id="ano"></span> SS Celulares. Projeto demonstrativo.</p><a href="#inicio">Voltar ao topo ↑</a></div></footer>
+</body>
+</html>
