@@ -2,7 +2,7 @@ name: Publicar site estático no GitHub Pages
 
 on:
   push:
-    branches: ["feat/github-pages-design"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
