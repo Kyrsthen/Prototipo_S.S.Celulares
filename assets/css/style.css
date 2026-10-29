@@ -14,3 +14,18 @@ body{background:#05070c;color:#f8fafc}.topo{background:rgba(5,7,12,.97);border-c
 .rodape{background:#05070c;color:#dce5f2;border-top:1px solid #1d2a3d}.rodape-conteudo{min-height:unset;padding-block:26px}.rodape a:hover{color:#0785ff}
 @media(max-width:800px){.navegacao{gap:10px;flex-wrap:wrap}.categorias-home-grade{grid-template-columns:repeat(3,minmax(0,1fr))}.assistencia-conteudo{gap:22px}}
 @media(max-width:560px){.barra{padding-block:10px;flex-wrap:wrap}.navegacao{order:3;width:100%;justify-content:space-between;gap:8px;font-size:10px}.hero-grade{grid-template-columns:1fr;padding-block:38px 18px}.hero-visual{min-height:280px}.categorias-home-grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.categoria-home{min-height:120px}.assistencia-home{grid-template-columns:1fr}.assistencia-foto{min-height:140px}.assistencia-conteudo{grid-template-columns:1fr;padding-block:28px;gap:20px}.servicos-lista{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.marcas-lista{justify-content:center}}
+
+
+/* Layout das páginas independentes do menu */
+.pagina-conteudo{min-height:62vh;padding:76px 0 88px;background:#05070c;color:#f8fafc}
+.pagina-conteudo h1{max-width:760px;margin:0;font-size:clamp(38px,6vw,62px);line-height:1.08;letter-spacing:-.055em}
+.pagina-conteudo h1 span{color:#0785ff}
+.pagina-intro{max-width:720px;color:#b8c2d1;font-size:15px;line-height:1.9;margin:20px 0 32px}
+.pagina-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0}
+.pagina-cards article{padding:26px;border:1px solid #1b2b42;border-radius:14px;background:#0c1320}
+.pagina-cards article>span{font-size:30px}
+.pagina-cards h2{margin:12px 0 8px;font-size:20px}
+.pagina-cards p{margin:0;color:#b8c2d1;font-size:13px;line-height:1.8}
+.pagina-conteudo .aviso-catalogo{margin-top:28px}
+.navegacao a[aria-current="page"]{color:#0785ff}
+@media(max-width:560px){.pagina-conteudo{padding:48px 0 60px}.pagina-cards{grid-template-columns:1fr;gap:12px}.pagina-cards article{padding:21px}.pagina-intro{font-size:13px}}
