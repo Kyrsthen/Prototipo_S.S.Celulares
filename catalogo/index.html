@@ -2,42 +2,55 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore o catálogo demonstrativo da SS Celulares.">
   <title>Catálogo | SS Celulares</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/catalogo.js" defer></script>
 </head>
 <body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
   <header class="topo">
     <div class="container barra">
-      <a class="marca" href="../index.html">
-        <span class="marca-simbolo">SS</span>
-        <span>SS <b>Celulares</b></span>
+      <a class="marca" href="../index.html" aria-label="SS Celulares — início">
+        <span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span>
       </a>
-
       <nav class="navegacao" aria-label="Navegação principal">
         <a href="../index.html">Início</a>
-        <a href="../sobre/">Sobre</a>
-        <a href="./">Catálogo</a>
+        <a href="../sobre/index.html">Sobre Nós</a>
+        <a href="./index.html" aria-current="page">Catálogo</a>
       </nav>
     </div>
   </header>
 
-  <main class="secao catalogo">
+  <main id="conteudo" class="secao catalogo">
     <div class="container">
-      <p class="sobretitulo">NOSSOS PRODUTOS</p>
-      <h1>Catálogo de celulares</h1>
-      <p class="texto-secundario">
-        Em breve, você poderá explorar aqui os produtos da loja.
-      </p>
-      <p><a class="botao botao-principal" href="../index.html">
-        Voltar para o início
-      </a></p>
+      <div class="catalogo-cabecalho">
+        <div>
+          <p class="sobretitulo">NOSSOS PRODUTOS</p>
+          <h1>Catálogo da <span>SS Celulares.</span></h1>
+          <p class="texto-secundario">Pesquise e filtre as opções demonstrativas.</p>
+        </div>
+        <span class="contador" id="contador-produtos">Carregando opções...</span>
+      </div>
+      <div class="filtros" id="acessorios">
+        <label class="campo-busca"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar por nome..." aria-label="Buscar produtos por nome"></label>
+        <div class="categorias" role="group" aria-label="Filtrar por categoria">
+          <button class="filtro ativo" type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
+          <button class="filtro" type="button" data-categoria="Premium" aria-pressed="false">Premium</button>
+          <button class="filtro" type="button" data-categoria="Intermediário" aria-pressed="false">Intermediários</button>
+          <button class="filtro" type="button" data-categoria="Acessório" aria-pressed="false">Acessórios</button>
+        </div>
+      </div>
+      <div class="produtos" id="lista-produtos" aria-live="polite"></div>
+      <p class="aviso-catalogo">Catálogo demonstrativo: produtos e preços são exemplos, não ofertas reais.</p>
     </div>
   </main>
 
-  <footer class="rodape">
+  <footer class="rodape" id="contato">
     <div class="container rodape-conteudo">
-      <p>SS Celulares — Projeto demonstrativo.</p>
+      <a href="../index.html">Voltar para o início ↑</a>
+      <p>© <span id="ano"></span> SS Celulares. Projeto demonstrativo.</p>
     </div>
   </footer>
 </body>
