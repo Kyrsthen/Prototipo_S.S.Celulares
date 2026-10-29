@@ -29,3 +29,35 @@ body{background:#05070c;color:#f8fafc}.topo{background:rgba(5,7,12,.97);border-c
 .pagina-conteudo .aviso-catalogo{margin-top:28px}
 .navegacao a[aria-current="page"]{color:#0785ff}
 @media(max-width:560px){.pagina-conteudo{padding:48px 0 60px}.pagina-cards{grid-template-columns:1fr;gap:12px}.pagina-cards article{padding:21px}.pagina-intro{font-size:13px}}
+
+
+/* Carrinho de compras */
+.contador-carrinho{display:inline-grid;place-items:center;min-width:19px;height:19px;padding:0 5px;margin-left:4px;border-radius:999px;background:#0785ff;color:#fff;font-size:10px;font-weight:800}
+.contador-carrinho[hidden]{display:none}
+.carrinho-vazio{margin:34px 0;padding:42px 24px;text-align:center;border:1px dashed #30415b;border-radius:16px;background:#0b1220}
+.carrinho-vazio>span{font-size:42px}
+.carrinho-vazio h2{margin:10px 0;font-size:25px}
+.carrinho-vazio p{margin:0 auto 22px;color:#b8c2d1;font-size:13px}
+.carrinho-vazio[hidden],#carrinho-conteudo[hidden],#resumo-carrinho[hidden]{display:none!important}
+.resumo-itens{color:#cbd5e1;font-size:13px}
+.itens-carrinho{display:grid;gap:12px}
+.item-carrinho{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;align-items:center;gap:18px;padding:20px;border:1px solid #1b2b42;border-radius:13px;background:#0c1320}
+.item-carrinho-info h2{margin:0;font-size:16px}
+.item-carrinho-info p{margin:5px 0 0;color:#aab4c3;font-size:11px}
+.item-carrinho-controles{display:flex;align-items:center;gap:12px}
+.quantidade-botao{width:32px;height:32px;border:1px solid #30415b;border-radius:8px;background:#101b2c;color:#fff;font-size:19px;cursor:pointer}
+.quantidade-botao:hover{border-color:#0785ff}
+.item-carrinho-preco{white-space:nowrap;font-size:14px}
+.remover-item,.botao-limpar{border:0;background:transparent;color:#7dbaff;font-size:12px;cursor:pointer}
+.remover-item:hover,.botao-limpar:hover{text-decoration:underline}
+.resumo-carrinho{max-width:440px;margin:22px 0 0 auto;padding:24px;border:1px solid #1b2b42;border-radius:14px;background:#0c1320}
+.resumo-carrinho h2{margin:0 0 18px;font-size:20px}
+.linha-resumo{display:flex;justify-content:space-between;gap:15px;margin:12px 0;color:#cbd5e1;font-size:13px}
+.linha-total{padding-top:15px;border-top:1px solid #263449;color:#fff;font-size:16px}
+.resumo-carrinho .botao-principal{width:100%;margin-top:14px;border:0;cursor:pointer;font-weight:800}
+.resumo-carrinho .aviso-catalogo{line-height:1.7}
+.botao-limpar{display:block;margin:12px auto 0}
+.mensagem-carrinho{min-height:18px;color:#93c5fd;font-size:12px}
+.continuar-comprando{margin-top:28px}
+.continuar-comprando .link-simples{color:#78baff}
+@media(max-width:700px){.item-carrinho{grid-template-columns:minmax(0,1fr) auto;gap:12px}.item-carrinho-controles{grid-column:1;grid-row:2}.item-carrinho-preco{grid-column:2;grid-row:1}.remover-item{grid-column:2;grid-row:2;justify-self:end}.resumo-carrinho{max-width:none}.contador-carrinho{min-width:17px;height:17px}}
