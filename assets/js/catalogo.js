@@ -121,11 +121,17 @@ function desenharProdutos() {
   const filtros = [...document.querySelectorAll("[data-categoria]")];
   const categoriaAtiva = filtros.find(botao => botao.getAttribute("aria-pressed") === "true")?.dataset.categoria || "Todos";
   const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
-  const encontrados = produtos.filter(produto =>
+  let encontrados = produtos.filter(produto =>
     (categoriaAtiva === "Todos" || produto.categoria === categoriaAtiva) &&
     (produto.nome.toLocaleLowerCase("pt-BR").includes(termo) || produto.descricao.toLocaleLowerCase("pt-BR").includes(termo))
   );
-  contador.textContent = encontrados.length === 1 ? "1 opção encontrada" : encontrados.length + " opções encontradas";
+  const ordenar = document.querySelector("#ordenar-produtos")?.value || "relevancia";
+  if (ordenar === "preco-menor") encontrados.sort((a,b) => a.preco-b.preco);
+  if (ordenar === "preco-maior") encontrados.sort((a,b) => b.preco-a.preco);
+  if (ordenar === "nome") encontrados.sort((a,b) => a.nome.localeCompare(b.nome,"pt-BR"));
+  contador.textContent = encontrados.length === 1 ? "1 produto encontrado" : encontrados.length + " produtos encontrados";
+  const resumoResultados = document.querySelector("#resumo-resultados");
+  if (resumoResultados) resumoResultados.textContent = "Mostrando " + encontrados.length + (encontrados.length === 1 ? " produto" : " produtos");
   lista.replaceChildren();
   if (!encontrados.length) {
     const vazio = document.createElement("p");
@@ -185,6 +191,19 @@ document.querySelectorAll("[data-categoria]").forEach(botao => {
 });
 const buscaEl = document.querySelector("#busca");
 if (buscaEl) buscaEl.addEventListener("input",desenharProdutos);
+const ordenarEl = document.querySelector("#ordenar-produtos");
+if (ordenarEl) ordenarEl.addEventListener("change",desenharProdutos);
+const limparFiltros = document.querySelector("#limpar-filtros");
+if (limparFiltros) limparFiltros.addEventListener("click",() => {
+  if (buscaEl) buscaEl.value = "";
+  if (ordenarEl) ordenarEl.value = "relevancia";
+  document.querySelectorAll("[data-categoria]").forEach(botao => {
+    const ativo = botao.dataset.categoria === "Todos";
+    botao.classList.toggle("ativo",ativo);
+    botao.setAttribute("aria-pressed",String(ativo));
+  });
+  desenharProdutos();
+});
 const limpar = document.querySelector("#limpar-carrinho");
 if (limpar) limpar.addEventListener("click",() => {
   salvarCarrinho([]);
