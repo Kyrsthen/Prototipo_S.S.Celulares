@@ -266,3 +266,34 @@ body{background:#05070c;color:#f8fafc}.topo{background:rgba(5,7,12,.97);border-c
  .home-rodape-grade{grid-template-columns:1fr 1fr;gap:24px 15px;padding-block:25px}.home-marca-texto{font-size:18px}.home-telefone{font-size:10px}.home-endereco strong{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.home-page *{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Cabeçalho e atalhos superiores unificados em todas as páginas */
+.topo-padrao{position:sticky;top:0;z-index:20;background:#10141b;border-bottom:1px solid #263449;backdrop-filter:blur(14px);color:#f8fafc}
+.topo-padrao .barra{min-height:72px;gap:clamp(12px,2vw,28px)}
+.topo-padrao .marca{gap:9px;flex-shrink:0;color:#f8fafc}
+.topo-padrao .marca-simbolo{display:grid;place-items:center;width:32px;height:43px;border:2px solid #f8fafc;border-radius:11px;background:transparent;color:#0785ff;font-size:13px;font-weight:800;letter-spacing:-.04em}
+.topo-padrao .home-marca-texto{font-size:22px;line-height:1.05;letter-spacing:-.04em;color:#f8fafc}
+.topo-padrao .home-marca-texto b{color:#0785ff}
+.topo-padrao .home-marca-texto small{display:block;margin-top:5px;font-size:8px;font-weight:500;letter-spacing:.07em;color:#d0d7e2}
+.topo-padrao .navegacao{display:flex;align-items:center;gap:clamp(10px,1.5vw,25px);color:#e1e6ee;font-size:12px;font-weight:450}
+.topo-padrao .navegacao a{position:relative;white-space:nowrap;transition:color .2s}
+.topo-padrao .navegacao a:hover,.topo-padrao .navegacao a[aria-current="page"]{color:#0785ff}
+.topo-padrao .navegacao a[aria-current="page"]:after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:2px;background:#0785ff}
+.topo-padrao .home-atalhos{display:flex;align-items:center;gap:22px;flex-shrink:0}
+.topo-padrao .home-icone-link{position:relative;display:grid;place-items:center;width:22px;height:30px;color:#f8fafc}
+.topo-padrao .home-icone-link:hover{color:#0785ff}
+.topo-padrao .home-lupa{width:15px;height:15px;border:2px solid currentColor;border-radius:50%;position:relative;display:block}
+.topo-padrao .home-lupa:after{content:"";position:absolute;width:6px;height:2px;background:currentColor;right:-5px;bottom:-2px;transform:rotate(48deg);border-radius:2px}
+.topo-padrao .home-cart-svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.topo-padrao .contador-carrinho:not([hidden]){position:absolute;top:-2px;right:-8px;display:grid;place-items:center;min-width:16px;height:16px;padding:0 4px;border-radius:99px;background:#087eff;color:#fff;font-size:10px;font-weight:800}
+.home-page .topo-padrao{position:relative}
+@media(max-width:1050px){
+ .topo-padrao .barra{gap:13px}.topo-padrao .home-marca-texto{font-size:19px}.topo-padrao .navegacao{gap:12px;font-size:11px}
+}
+@media(max-width:760px){
+ .topo-padrao .barra{min-height:unset;padding-block:12px;flex-wrap:wrap}
+ .topo-padrao .navegacao{order:3;width:100%;overflow-x:auto;justify-content:flex-start;gap:21px;padding:8px 0 4px;white-space:nowrap;font-size:11px}
+ .topo-padrao .navegacao a[aria-current="page"]:after{bottom:-5px}
+ .topo-padrao .home-atalhos{margin-left:auto}
+}

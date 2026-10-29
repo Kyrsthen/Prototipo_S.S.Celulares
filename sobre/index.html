@@ -7,23 +7,27 @@
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <header class="topo">
+  <header class="topo topo-padrao">
     <div class="container barra">
-      <a class="marca" href="../index.html">
-        <span class="marca-simbolo">SS</span>
-        <span>SS <b>Celulares</b></span>
+      <a class="marca" href="../index.html" aria-label="SS Celulares — início">
+        <span class="marca-simbolo home-marca-simbolo">SS</span>
+        <span class="home-marca-texto">S.S <b>Celulares</b><small>ASSISTÊNCIA TÉCNICA EM SMARTPHONES</small></span>
       </a>
-
       <nav class="navegacao" aria-label="Navegação principal">
         <a href="../index.html">Início</a>
-        <a href="../catalogo/index.html">Catálogo</a>
         <a href="../celulares/index.html">Celulares</a>
         <a href="../acessorios/index.html">Acessórios</a>
         <a href="../assistencia/index.html">Assistência Técnica</a>
-        <a href="./index.html" aria-current="page">Sobre Nós</a>
+        <a href="../sobre/index.html" aria-current="page">Sobre Nós</a>
         <a href="../contato/index.html">Contato</a>
-              <a href="../carrinho/index.html">Carrinho <span class="contador-carrinho" data-contador-carrinho hidden>0</span></a>
       </nav>
+      <div class="home-atalhos" aria-label="Atalhos">
+        <a href="../catalogo/index.html" aria-label="Buscar produtos" class="home-icone-link"><span class="home-lupa" aria-hidden="true"></span></a>
+        <a class="home-icone-link home-carrinho" href="../carrinho/index.html" aria-label="Abrir carrinho">
+          <svg class="home-cart-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+          <span class="contador-carrinho" data-contador-carrinho hidden>0</span>
+        </a>
+      </div>
     </div>
   </header>
 
