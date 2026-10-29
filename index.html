@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Conheça a SS Celulares: smartphones, acessórios e tecnologia para o seu dia a dia.">
-  <meta name="theme-color" content="#101827">
-  <title>SS Celulares | Assistência técnica em smartphones</title>
+  <meta name="theme-color" content="#05070c">
+  <title>SS Celulares | Celulares, acessórios e assistência</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/catalogo.js" defer></script>
 </head>
@@ -18,10 +18,13 @@
       </a>
       <nav class="navegacao" aria-label="Navegação principal">
         <a href="./index.html">Início</a>
-        <a href="./sobre/">Sobre</a>
-        <a href="./catalogo/">Catálogo</a>
+        <a href="#celulares">Celulares</a>
+        <a href="#acessorios">Acessórios</a>
+        <a href="#assistencia">Assistência Técnica</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#contato">Contato</a>
       </nav>
-      <a class="botao botao-contorno" href="#produtos">Explorar catálogo <span aria-hidden="true">↗</span></a>
+      <a class="botao botao-contorno" href="#produtos" aria-label="Ver produtos">🛒</a>
     </div>
   </header>
 
@@ -29,11 +32,11 @@
     <section class="hero" id="inicio">
       <div class="container hero-grade">
         <div class="hero-texto">
-          <p class="sobretitulo"><span class="ponto"></span> TECNOLOGIA QUE CONECTA</p>
-          <h1>Seu próximo celular começa <span>aqui.</span></h1>
-          <p class="hero-descricao">Descubra opções para acompanhar sua rotina, registrar seus melhores momentos e ficar sempre conectado.</p>
+          <p class="sobretitulo"><span class="ponto"></span> SEU CELULAR EM BOAS MÃOS</p>
+          <h1>Celulares novos <span>e seminovos.</span></h1>
+          <p class="hero-descricao">As melhores marcas, com garantia e condições especiais de pagamento.</p>
           <div class="hero-acoes">
-            <a class="botao botao-principal" href="#produtos">Ver catálogo <span aria-hidden="true">→</span></a>
+            <a class="botao botao-principal" href="#produtos">Ver celulares <span aria-hidden="true">→</span></a>
             <a class="link-simples" href="#sobre">Conheça a loja</a>
           </div>
           <div class="hero-nota"><span class="nota-icone" aria-hidden="true">✦</span><span><strong>Escolha com confiança</strong><br>Informação clara para comparar opções.</span></div>
@@ -44,13 +47,21 @@
             <div class="telefone-ilha"></div>
             <div class="telefone-tela"><span class="tela-mini">SS / CELULARES</span><div class="tela-circulo"></div><strong>Conecte-se<br>ao que importa.</strong><span class="tela-linha"></span></div>
           </div>
-          <div class="selo selo-topo"><span>✦</span> Novidades em tecnologia</div>
-          <div class="selo selo-base"><span class="selo-ponto"></span> Seu mundo, conectado</div>
+          <div class="selo selo-topo"><span>✦</span> Produtos 100% originais</div>
+          <div class="selo selo-base"><span class="selo-ponto"></span> Parcelamento em até 12x*</div>
         </div>
       </div>
     </section>
 
-    <section class="beneficios" aria-label="Diferenciais">
+    <section class="categorias-home" aria-label="Categorias da loja"><div class="container categorias-home-grade">
+<a class="categoria-home" href="#celulares"><span>📱</span><strong>Celulares</strong><b>→</b></a>
+<a class="categoria-home" href="#acessorios"><span>🎧</span><strong>Acessórios</strong><b>→</b></a>
+<a class="categoria-home" href="#assistencia"><span>🛠️</span><strong>Assistência Técnica</strong><b>→</b></a>
+<a class="categoria-home" href="#acessorios"><span>⌚</span><strong>Smartwatches</strong><b>→</b></a>
+<a class="categoria-home" href="#acessorios"><span>🎵</span><strong>Fones de ouvido</strong><b>→</b></a>
+<a class="categoria-home" href="#acessorios"><span>🛡️</span><strong>Películas</strong><b>→</b></a>
+</div></section>
+<section class="beneficios" aria-label="Diferenciais">
       <div class="container beneficios-grade">
         <div><span class="beneficio-icone">⌕</span><span><strong>Compare opções</strong><small>Encontre o que combina com você</small></span></div>
         <div><span class="beneficio-icone">◇</span><span><strong>Design e tecnologia</strong><small>Opções para diferentes rotinas</small></span></div>
@@ -65,10 +76,10 @@
       </div>
     </section>
 
-    <section class="secao catalogo" id="produtos">
+    <section class="secao catalogo" id="celulares">
       <div class="container">
         <div class="catalogo-cabecalho"><div><p class="sobretitulo">NOSSO CATÁLOGO</p><h2>Encontre seu próximo <span>favorito.</span></h2><p class="texto-secundario">Use a busca ou filtre por categoria para explorar as opções.</p></div><span class="contador" id="contador-produtos">6 opções demonstrativas</span></div>
-        <div class="filtros">
+        <div class="filtros" id="acessorios">
           <label class="campo-busca"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar por nome..." aria-label="Buscar produtos por nome"></label>
           <div class="categorias" role="group" aria-label="Filtrar por categoria">
             <button class="filtro ativo" type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
@@ -82,11 +93,9 @@
       </div>
     </section>
 
-    <section class="chamada">
-      <div class="container chamada-conteudo"><div><p class="sobretitulo">A ESCOLHA É SUA</p><h2>Conecte-se com o que vem pela frente.</h2><p>Explore as opções e descubra qual combina com suas necessidades.</p></div><a class="botao botao-claro" href="#produtos">Explorar catálogo <span aria-hidden="true">→</span></a></div>
-    </section>
+    <section class="assistencia-home" id="assistencia"><div class="assistencia-foto" aria-hidden="true">🔧　📱　🛠️</div><div class="container assistencia-conteudo"><div><p class="sobretitulo">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</p><h2>Seu celular funcionando <span>como novo!</span></h2><p>Consulte nossos serviços de manutenção e entre em contato para solicitar um orçamento.</p><a class="botao botao-principal" href="#contato">Solicite um orçamento →</a></div><ul class="servicos-lista"><li>Troca de tela</li><li>Troca de bateria</li><li>Conserto de placas</li><li>Atualização de software</li><li>Limpeza interna</li><li>E muito mais!</li></ul></div></section><section class="marcas-home"><div class="container"><p class="sobretitulo">AS MELHORES MARCAS</p><div class="marcas-lista"><span>Apple</span><span>SAMSUNG</span><span>mi</span><span>motorola</span><span>ASUS</span></div><p class="marcas-aviso">Consulte a disponibilidade de marcas e modelos na loja.</p></div></section>
   </main>
 
-  <footer class="rodape"><div class="container rodape-conteudo"><a class="marca marca-rodape" href="#inicio"><span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span></a><p>© <span id="ano"></span> SS Celulares. Projeto demonstrativo.</p><a href="#inicio">Voltar ao topo ↑</a></div></footer>
+  <footer class="rodape" id="contato"><div class="container rodape-conteudo"><a class="marca marca-rodape" href="#inicio"><span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span></a><p>© <span id="ano"></span> SS Celulares. Projeto demonstrativo. | Consulte condições na loja.</p><a href="#inicio">Voltar ao topo ↑</a></div></footer>
 </body>
 </html>
