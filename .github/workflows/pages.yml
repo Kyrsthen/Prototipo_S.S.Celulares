@@ -30,6 +30,8 @@ jobs:
           mkdir -p public
           cp index.html public/
           cp -r assets public/assets
+          cp -r sobre public/sobre
+          cp -r catalogo public/catalogo
       - name: Enviar artefato
         uses: actions/upload-pages-artifact@v3
         with:
