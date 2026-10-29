@@ -3,100 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Conheça a SS Celulares: smartphones, acessórios e tecnologia para o seu dia a dia.">
+  <meta name="description" content="SS Celulares: smartphones, acessórios e assistência técnica em Cesário Lange - SP.">
   <meta name="theme-color" content="#05070c">
   <title>SS Celulares | Celulares, acessórios e assistência</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/catalogo.js" defer></script>
 </head>
-<body>
+<body class="home-page">
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
-  <header class="topo">
+  <header class="topo home-topo">
     <div class="container barra">
-      <a class="marca" href="#inicio" aria-label="SS Celulares — início">
-        <span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span>
+      <a class="marca" href="./index.html" aria-label="SS Celulares — início">
+        <span class="marca-simbolo home-marca-simbolo">♧</span>
+        <span class="home-marca-texto">S.S <b>Celulares</b><small>ASSISTÊNCIA TÉCNICA EM SMARTPHONES</small></span>
       </a>
       <nav class="navegacao" aria-label="Navegação principal">
-        <a href="./index.html">Início</a>
-        <a href="./catalogo/index.html">Catálogo</a>
+        <a href="./index.html" aria-current="page">Início</a>
         <a href="./celulares/index.html">Celulares</a>
         <a href="./acessorios/index.html">Acessórios</a>
         <a href="./assistencia/index.html">Assistência Técnica</a>
         <a href="./sobre/index.html">Sobre Nós</a>
         <a href="./contato/index.html">Contato</a>
       </nav>
-      <a class="botao botao-contorno" href="./carrinho/index.html" aria-label="Abrir carrinho de compras">🛒 <span class="contador-carrinho" data-contador-carrinho hidden>0</span></a>
+      <div class="home-atalhos">
+        <a href="./catalogo/index.html" aria-label="Buscar produtos" class="home-icone-link"><span class="home-lupa"></span></a>
+        <a class="home-icone-link home-carrinho" href="./carrinho/index.html" aria-label="Abrir carrinho"><span class="home-cart-icon">🛒</span><span class="contador-carrinho" data-contador-carrinho hidden>0</span></a>
+      </div>
     </div>
   </header>
 
   <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="container hero-grade">
-        <div class="hero-texto">
-          <p class="sobretitulo"><span class="ponto"></span> SEU CELULAR EM BOAS MÃOS</p>
-          <h1>Celulares novos <span>e seminovos.</span></h1>
-          <p class="hero-descricao">As melhores marcas, com garantia e condições especiais de pagamento.</p>
-          <div class="hero-acoes">
-            <a class="botao botao-principal" href="#celulares">Ver celulares <span aria-hidden="true">→</span></a>
-            <a class="link-simples" href="./sobre/index.html">Conheça a loja</a>
-          </div>
-          <div class="hero-nota"><span class="nota-icone" aria-hidden="true">✦</span><span><strong>Escolha com confiança</strong><br>Informação clara para comparar opções.</span></div>
+    <section class="home-hero" id="inicio">
+      <div class="container home-hero-grade">
+        <div class="home-hero-texto">
+          <p class="home-eyebrow"><span></span> SEU CELULAR EM BOAS MÃOS</p>
+          <h1>Celulares<br>novos <em>e</em><br><strong>seminovos</strong></h1>
+          <p class="home-hero-descricao">As melhores marcas, com garantia e condições especiais de pagamento.</p>
+          <a class="home-botao-azul" href="./celulares/index.html">Ver celulares <span>→</span></a>
         </div>
-        <div class="hero-visual" aria-label="Ilustração decorativa de smartphone">
-          <div class="orb orb-um"></div><div class="orb orb-dois"></div>
-          <div class="telefone">
-            <div class="telefone-ilha"></div>
-            <div class="telefone-tela"><span class="tela-mini">SS / CELULARES</span><div class="tela-circulo"></div><strong>Conecte-se<br>ao que importa.</strong><span class="tela-linha"></span></div>
-          </div>
-          <div class="selo selo-topo"><span>✦</span> Produtos 100% originais</div>
-          <div class="selo selo-base"><span class="selo-ponto"></span> Parcelamento em até 12x*</div>
+        <div class="home-phones-visual" aria-label="Ilustração de três smartphones com iluminação azul">
+          <div class="home-raio home-raio-um"></div><div class="home-raio home-raio-dois"></div><div class="home-raio home-raio-tres"></div>
+          <div class="home-reflexo"></div>
+          <div class="home-phone home-phone-um"><div class="home-camera"><i></i><i></i><i></i></div><div class="home-phone-side"></div></div>
+          <div class="home-phone home-phone-dois"><div class="home-camera"><i></i><i></i><i></i></div><div class="home-phone-glow"></div></div>
+          <div class="home-phone home-phone-tres"><div class="home-camera"><i></i><i></i><i></i></div></div>
+        </div>
+        <div class="home-promessas">
+          <div><span class="home-promessa-icone">♢</span><p>Produtos<strong>100% originais</strong></p></div>
+          <div><span class="home-promessa-icone">▱</span><p>Parcelamento<strong>em até 12x*</strong></p></div>
+          <div><span class="home-promessa-icone">♧</span><p>Entrega rápida<strong>para toda a região</strong></p></div>
         </div>
       </div>
     </section>
 
-    <section class="categorias-home" aria-label="Categorias da loja"><div class="container categorias-home-grade">
-<a class="categoria-home" href="./celulares/index.html"><span>📱</span><strong>Celulares</strong><b>→</b></a>
-<a class="categoria-home" href="./acessorios/index.html"><span>🎧</span><strong>Acessórios</strong><b>→</b></a>
-<a class="categoria-home" href="./assistencia/index.html"><span>🛠️</span><strong>Assistência Técnica</strong><b>→</b></a>
-<a class="categoria-home" href="#acessorios"><span>⌚</span><strong>Smartwatches</strong><b>→</b></a>
-<a class="categoria-home" href="#acessorios"><span>🎵</span><strong>Fones de ouvido</strong><b>→</b></a>
-<a class="categoria-home" href="#acessorios"><span>🛡️</span><strong>Películas</strong><b>→</b></a>
-</div></section>
-<section class="beneficios" aria-label="Diferenciais">
-      <div class="container beneficios-grade">
-        <div><span class="beneficio-icone">⌕</span><span><strong>Compare opções</strong><small>Encontre o que combina com você</small></span></div>
-        <div><span class="beneficio-icone">◇</span><span><strong>Design e tecnologia</strong><small>Opções para diferentes rotinas</small></span></div>
-        <div><span class="beneficio-icone">♡</span><span><strong>Atendimento próximo</strong><small>Conte com orientação na escolha</small></span></div>
+    <section class="home-categorias" aria-label="Categorias da loja">
+      <div class="container home-categorias-grade">
+        <a href="./celulares/index.html" class="home-categoria"><span class="home-cat-icon">▯</span><strong>Celulares</strong><b>→</b></a>
+        <a href="./acessorios/index.html" class="home-categoria"><span class="home-cat-icon">♧</span><strong>Capinhas</strong><b>→</b></a>
+        <a href="./assistencia/index.html" class="home-categoria"><span class="home-cat-icon">⚒</span><strong>Assistência Técnica</strong><b>→</b></a>
+        <a href="./acessorios/index.html" class="home-categoria"><span class="home-cat-icon">ϟ</span><strong>Carregadores</strong><b>→</b></a>
+        <a href="./acessorios/index.html" class="home-categoria"><span class="home-cat-icon">♬</span><strong>Fones de Ouvido</strong><b>→</b></a>
+        <a href="./acessorios/index.html" class="home-categoria"><span class="home-cat-icon">◎</span><strong>Caixinhas de Som</strong><b>→</b></a>
       </div>
     </section>
 
-    <section class="secao sobre" id="sobre">
-      <div class="container sobre-grade">
-        <div><p class="sobretitulo">SOBRE A SS CELULARES</p><h2>Tecnologia mais perto de você.</h2></div>
-        <div><p>Queremos ajudar você a encontrar dispositivos e acessórios que façam sentido para o seu dia a dia. Explore o catálogo demonstrativo e compare as informações de cada opção.</p><a class="link-simples" href="#celulares">Ir para os produtos <span aria-hidden="true">→</span></a></div>
+    <section class="home-destaques" id="celulares">
+      <div class="container home-destaques-grade">
+        <div class="home-destaques-intro">
+          <p class="home-eyebrow"><span></span> PRODUTOS EM DESTAQUE</p>
+          <h2>Os melhores<br><strong>celulares para<br>você</strong></h2>
+          <p>Modelos das principais marcas, com qualidade e procedência garantida.</p>
+          <a class="home-botao-azul" href="./catalogo/index.html">Ver todos <span>→</span></a>
+        </div>
+        <div class="home-produtos">
+          <article class="home-produto"><div class="home-produto-imagem"><div class="home-produto-celular purple"><div class="home-produto-tela"></div><span></span></div></div><h3>iPhone 15 128GB</h3><p>Apple</p><strong>R$ 5.499,00</strong><a href="./catalogo/index.html">🛒 &nbsp; Comprar</a></article>
+          <article class="home-produto"><div class="home-produto-imagem"><div class="home-produto-celular white"><div class="home-produto-tela blue"></div><span></span></div></div><h3>Galaxy A55 128GB</h3><p>Samsung</p><strong>R$ 2.199,00</strong><a href="./catalogo/index.html">🛒 &nbsp; Comprar</a></article>
+          <article class="home-produto"><div class="home-produto-imagem"><div class="home-produto-celular white"><div class="home-produto-tela cyan"></div><span></span></div></div><h3>Redmi Note 13 128GB</h3><p>Xiaomi</p><strong>R$ 1.399,00</strong><a href="./catalogo/index.html">🛒 &nbsp; Comprar</a></article>
+          <article class="home-produto"><div class="home-produto-imagem"><div class="home-produto-celular graphite"><div class="home-produto-tela purple"></div><span></span></div></div><h3>Moto G34 128GB</h3><p>Motorola</p><strong>R$ 999,00</strong><a href="./catalogo/index.html">🛒 &nbsp; Comprar</a></article>
+        </div>
+      </div>
+      <p class="home-precos-aviso">Produtos e valores ilustrativos. Consulte disponibilidade e preços atualizados na loja.</p>
+    </section>
+
+    <section class="home-assistencia" id="assistencia">
+      <div class="home-assistencia-foto" aria-hidden="true"><div class="home-placa-circuito"><span></span><i></i><b></b><em></em></div><div class="home-ferramenta">⌁</div></div>
+      <div class="container home-assistencia-conteudo">
+        <div><p class="home-eyebrow"><span></span> ASSISTÊNCIA TÉCNICA ESPECIALIZADA</p><h2>Seu celular funcionando <strong>como novo!</strong></h2><p>Realizamos consertos com agilidade, <b>segurança</b> e garantia. Contamos com uma equipe técnica especializada e peças de alta qualidade.</p><a class="home-botao-azul" href="./contato/index.html">Solicite um orçamento <span>→</span></a></div>
+        <ul><li>Troca de tela</li><li>Troca de bateria</li><li>Conserto de placas</li><li>Atualização de software</li><li>Limpeza interna</li><li>E muito mais!</li></ul>
       </div>
     </section>
 
-    <section class="secao catalogo" id="celulares">
+    <section class="home-sobre" id="sobre">
       <div class="container">
-        <div class="catalogo-cabecalho"><div><p class="sobretitulo">NOSSO CATÁLOGO</p><h2>Encontre seu próximo <span>favorito.</span></h2><p class="texto-secundario">Use a busca ou filtre por categoria para explorar as opções.</p></div><span class="contador" id="contador-produtos">6 opções demonstrativas</span></div>
-        <div class="filtros" id="acessorios">
-          <label class="campo-busca"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar por nome..." aria-label="Buscar produtos por nome"></label>
-          <div class="categorias" role="group" aria-label="Filtrar por categoria">
-            <button class="filtro ativo" type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
-            <button class="filtro" type="button" data-categoria="Premium" aria-pressed="false">Premium</button>
-            <button class="filtro" type="button" data-categoria="Intermediário" aria-pressed="false">Intermediários</button>
-            <button class="filtro" type="button" data-categoria="Acessório" aria-pressed="false">Acessórios</button>
-          </div>
-        </div>
-        <div class="produtos" id="lista-produtos" aria-live="polite"></div>
-        <p class="aviso-catalogo">Catálogo demonstrativo: nomes, imagens e preços de exemplo. Atualize os dados antes de usar o site como loja real.</p>
+        <p class="home-eyebrow"><span></span> SOBRE NÓS</p>
+        <h2>Desde 2019 cuidando do <strong>seu celular</strong></h2>
+        <p>A S.S Celulares, em Cesário Lange - SP, reúne em um só lugar assistência técnica e uma variedade de acessórios para o dia a dia: capinhas, carregadores, fones de ouvido, caixinhas de som e outros eletrônicos.</p>
+        <div class="home-marcas"><span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Motorola</span><span>Asus</span></div>
       </div>
     </section>
-
-    <section class="assistencia-home" id="assistencia"><div class="assistencia-foto" aria-hidden="true">🔧　📱　🛠️</div><div class="container assistencia-conteudo"><div><p class="sobretitulo">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</p><h2>Seu celular funcionando <span>como novo!</span></h2><p>Consulte nossos serviços de manutenção e entre em contato para solicitar um orçamento.</p><a class="botao botao-principal" href="./contato/index.html">Solicite um orçamento →</a></div><ul class="servicos-lista"><li>Troca de tela</li><li>Troca de bateria</li><li>Conserto de placas</li><li>Atualização de software</li><li>Limpeza interna</li><li>E muito mais!</li></ul></div></section><section class="marcas-home"><div class="container"><p class="sobretitulo">AS MELHORES MARCAS</p><div class="marcas-lista"><span>Apple</span><span>SAMSUNG</span><span>mi</span><span>motorola</span><span>ASUS</span></div><p class="marcas-aviso">Consulte a disponibilidade de marcas e modelos na loja.</p></div></section>
   </main>
 
-  <footer class="rodape" id="contato"><div class="container rodape-conteudo"><a class="marca marca-rodape" href="#inicio"><span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span></a><p>© <span id="ano"></span> SS Celulares. Projeto demonstrativo. | Consulte condições na loja.</p><a href="#inicio">Voltar ao topo ↑</a></div></footer>
+  <footer class="rodape home-rodape">
+    <div class="container home-rodape-grade">
+      <a class="marca" href="./index.html"><span class="marca-simbolo home-marca-simbolo">♧</span><span class="home-marca-texto">S.S <b>Celulares</b><small>ASSISTÊNCIA TÉCNICA EM SMARTPHONES</small></span></a>
+      <div class="home-telefone"><strong>☏ &nbsp; (15) 99145-4912</strong><strong>♧ &nbsp; (15) 99657-0743</strong></div>
+      <div class="home-social"><span>Redes sociais</span><strong>◎ &nbsp; f</strong></div>
+      <div class="home-endereco"><strong>⌖ &nbsp; Estamos prontos para te atender!</strong><p>Cesário Lange - SP. Visite nossa loja ou fale conosco.</p></div>
+    </div>
+  </footer>
 </body>
 </html>
