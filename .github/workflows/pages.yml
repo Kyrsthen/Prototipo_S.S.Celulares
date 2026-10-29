@@ -32,6 +32,10 @@ jobs:
           cp -r assets public/assets
           cp -r sobre public/sobre
           cp -r catalogo public/catalogo
+          cp -r celulares public/celulares
+          cp -r acessorios public/acessorios
+          cp -r assistencia public/assistencia
+          cp -r contato public/contato
       - name: Enviar artefato
         uses: actions/upload-pages-artifact@v3
         with:
