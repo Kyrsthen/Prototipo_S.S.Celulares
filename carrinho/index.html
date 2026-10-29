@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Revise os produtos adicionados ao carrinho demonstrativo da SS Celulares.">
+  <title>Carrinho | SS Celulares</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/catalogo.js" defer></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container barra">
+      <a class="marca" href="../index.html" aria-label="SS Celulares — início"><span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span></a>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <a href="../index.html">Início</a>
+        <a href="../catalogo/index.html">Catálogo</a>
+        <a href="../celulares/index.html">Celulares</a>
+        <a href="../acessorios/index.html">Acessórios</a>
+        <a href="../assistencia/index.html">Assistência Técnica</a>
+        <a href="../sobre/index.html">Sobre Nós</a>
+        <a href="../contato/index.html">Contato</a>
+        <a href="./index.html" aria-current="page">Carrinho <span class="contador-carrinho" data-contador-carrinho hidden>0</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo" class="pagina-conteudo">
+    <div class="container">
+      <p class="sobretitulo">SEUS PRODUTOS</p>
+      <h1>Seu carrinho de <span>compras.</span></h1>
+      <p class="pagina-intro">Confira os itens escolhidos e ajuste as quantidades antes de continuar.</p>
+      <div id="carrinho-vazio" class="carrinho-vazio">
+        <span aria-hidden="true">🛒</span>
+        <h2>Seu carrinho está vazio</h2>
+        <p>Explore o catálogo e adicione os produtos que deseja comparar.</p>
+        <a class="botao botao-principal" href="../catalogo/index.html">Explorar catálogo →</a>
+      </div>
+      <div id="carrinho-conteudo" hidden>
+        <p class="resumo-itens">Itens no carrinho: <strong id="total-itens-carrinho">0</strong></p>
+        <div id="itens-carrinho" class="itens-carrinho" aria-live="polite"></div>
+      </div>
+      <aside id="resumo-carrinho" class="resumo-carrinho" hidden>
+        <h2>Resumo do pedido</h2>
+        <div class="linha-resumo"><span>Subtotal</span><strong id="subtotal-carrinho">R$ 0,00</strong></div>
+        <div class="linha-resumo"><span>Entrega</span><span>A calcular</span></div>
+        <div class="linha-resumo linha-total"><span>Total estimado</span><strong id="total-carrinho">R$ 0,00</strong></div>
+        <p class="aviso-catalogo">Valores ilustrativos. Este protótipo não processa pagamentos nem confirma pedidos.</p>
+        <button class="botao botao-principal" id="finalizar-pedido" type="button">Continuar pedido →</button>
+        <button class="botao-limpar" id="limpar-carrinho" type="button">Esvaziar carrinho</button>
+        <p id="mensagem-finalizacao" class="mensagem-carrinho" role="status"></p>
+      </aside>
+      <p id="mensagem-carrinho" class="mensagem-carrinho" role="status"></p>
+      <p class="continuar-comprando"><a class="link-simples" href="../catalogo/index.html">← Continuar explorando o catálogo</a></p>
+    </div>
+  </main>
+  <footer class="rodape"><div class="container rodape-conteudo"><a class="marca marca-rodape" href="../index.html"><span class="marca-simbolo">SS</span><span>SS <b>Celulares</b></span></a><p>© <span id="ano"></span> SS Celulares. Projeto demonstrativo.</p><a href="../index.html">Voltar ao início ↑</a></div></footer>
+</body>
+</html>
