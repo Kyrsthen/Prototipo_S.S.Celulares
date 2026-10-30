@@ -297,3 +297,42 @@ body{background:#05070c;color:#f8fafc}.topo{background:rgba(5,7,12,.97);border-c
  .topo-padrao .navegacao a[aria-current="page"]:after{bottom:-5px}
  .topo-padrao .home-atalhos{margin-left:auto}
 }
+
+
+/* Identidade visual global S.S. Celulares — azul, preto e tons claros */
+:root{--ink:#111827;--muted:#667085;--navy:#05070c;--navy-2:#101827;--lime:#087eff;--paper:#f3f6fa;--line:#dce3ec;--white:#fff;--radius:16px;--shadow:0 16px 40px rgba(5,15,35,.10)}
+body:not(.home-page){background:#f3f6fa;color:#111827}
+.pagina-conteudo{min-height:calc(100vh - 150px);padding:58px 0 72px;background:#f3f6fa}
+.pagina-conteudo .container{max-width:1120px}
+.pagina-conteudo .sobretitulo,.catalogo-pagina .sobretitulo{color:#087eff;font-weight:750}
+.pagina-conteudo h1,.catalogo-pagina h1{max-width:850px;margin:0;color:#101827;font-size:clamp(34px,4vw,48px);line-height:1.12;letter-spacing:-.05em;font-weight:850}
+.pagina-conteudo h1 span,.catalogo-pagina h1 span{color:#087eff}
+.pagina-intro,.texto-secundario{max-width:720px;color:#596579;font-size:15px;line-height:1.8;margin:18px 0 32px}
+.pagina-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:32px 0}
+.pagina-cards article{display:flex;flex-direction:column;align-items:flex-start;min-height:190px;padding:25px;border:1px solid #e0e7ef;border-radius:16px;background:#fff;box-shadow:0 8px 25px rgba(16,24,40,.045)}
+.pagina-cards article>span{display:grid;place-items:center;width:43px;height:43px;margin-bottom:15px;border-radius:12px;background:#eaf3ff;color:#087eff;font-size:22px}
+.pagina-cards h2{margin:0 0 8px;color:#101827;font-size:18px;letter-spacing:-.025em}
+.pagina-cards p{margin:0;color:#667085;font-size:13px;line-height:1.75}
+.aviso-catalogo{margin:26px 0;padding:14px 17px;border-left:3px solid #087eff;border-radius:0 10px 10px 0;background:#eaf3ff;color:#40516a;font-size:12px;line-height:1.7}
+.botao-principal{background:#087eff;color:white;border-radius:999px;padding:14px 22px;box-shadow:0 10px 24px #087eff25}
+.botao-principal:hover{background:#006de0;color:white}
+.rodape-global{background:#05070c;color:#f8fafc;border-top:1px solid #1e293b}
+.rodape-padrao{display:grid;grid-template-columns:1fr 1.5fr;gap:22px;align-items:center;padding-block:28px}
+.rodape-links{display:flex;justify-content:flex-end;gap:clamp(12px,2vw,25px);flex-wrap:wrap;color:#c2cad6;font-size:12px}
+.rodape-links a:hover,.rodape-final a:hover{color:#0785ff}
+.rodape-final{grid-column:1/-1;display:flex;justify-content:space-between;gap:18px;padding-top:17px;border-top:1px solid #1e293b;color:#8f9bad;font-size:11px}
+.rodape-final a{color:#c2cad6}
+.catalogo-pagina{background:#f3f6fa}
+.catalogo-hero{background:#05070c;color:#fff}
+.catalogo-hero h1{color:#fff}
+.catalogo-hero h1 span{color:#087eff}
+.catalogo-destaques{background:#e7edf4}
+.catalogo-destaques-grade>div{color:#111827}
+.catalogo-explorar{background:#f3f6fa}
+.catalogo-painel-filtros,.produto,.carrinho-vazio,.resumo-carrinho,.item-carrinho{border:1px solid #e0e7ef;border-radius:16px;background:#fff;box-shadow:0 8px 25px rgba(16,24,40,.045)}
+.filtro.ativo,.filtro:hover{background:#087eff;border-color:#087eff;color:#fff}
+.adicionar-carrinho{background:#087eff;color:#fff;border-radius:10px}
+.carrinho-vazio{padding:35px;text-align:center}
+.carrinho-vazio>span{font-size:35px;color:#087eff}
+.resumo-carrinho{padding:24px}
+@media(max-width:760px){.pagina-conteudo{padding:40px 0 52px}.pagina-cards{grid-template-columns:1fr;gap:13px}.pagina-cards article{min-height:unset}.rodape-padrao{grid-template-columns:1fr;gap:18px}.rodape-links{justify-content:flex-start}.rodape-final{grid-column:auto;flex-wrap:wrap}.pagina-conteudo h1{font-size:36px}}
