@@ -79,13 +79,6 @@ body{background:#05070c;color:#f8fafc}.topo{background:rgba(5,7,12,.97);border-c
 .catalogo-aparelho>div{height:100%;border-radius:17px;background:radial-gradient(circle at 65% 35%,#49baff 0,transparent 27%),radial-gradient(circle at 30% 65%,#1264e9 0,transparent 38%),linear-gradient(145deg,#14243e,#050a13 75%)}
 .catalogo-aparelho>div:before{content:"";display:block;width:35px;height:7px;margin:5px auto;border-radius:8px;background:#02050a}
 .catalogo-flutuante{position:absolute;right:0;bottom:35px;padding:10px 14px;border:1px solid #24415f;border-radius:9px;background:#0a1422;color:#9dcfff;font-size:10px;font-weight:850;letter-spacing:.12em}
-.catalogo-destaques{background:#080e18;border-bottom:1px solid #172438}
-.catalogo-destaques-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-block:23px}
-.catalogo-destaques-grade>div{display:flex;align-items:center;gap:12px}
-.destaque-icone{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border:1px solid #203c5b;border-radius:11px;background:#0d1b2c;color:#168bff;font-size:20px}
-.catalogo-destaques strong,.catalogo-destaques small{display:block}
-.catalogo-destaques strong{font-size:11px;color:#f8fafc}
-.catalogo-destaques small{margin-top:3px;color:#8f9caf;font-size:10px}
 .catalogo-explorar{padding:70px 0 82px;background:#05070c}
 .catalogo-explorar .catalogo-cabecalho{align-items:end}
 .catalogo-explorar .catalogo-cabecalho h2{margin:0;font-size:clamp(31px,4vw,43px);line-height:1.12;letter-spacing:-.055em;color:#f8fafc}
@@ -575,82 +568,3 @@ select:focus-visible {
   color: #f4f7fb !important;
 }
 
-
-/* Catálogo: faixa de benefícios em tema escuro, conforme a referência visual */
-.catalogo-destaques {
-  padding: 36px 0;
-  background: #05070c !important;
-  border-bottom: 0 !important;
-  color: #f4f7fb !important;
-}
-.catalogo-destaques-grade {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  min-height: 122px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: center;
-  gap: 24px;
-  padding: 24px max(24px, calc((100% - 1500px) / 2)) !important;
-  border: 1px solid #244365;
-  border-radius: 9px;
-  background: linear-gradient(110deg, #0b1422 0%, #0d1929 50%, #0a1320 100%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 12px 30px rgba(0,0,0,.22);
-}
-.catalogo-destaques-grade > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 26px;
-  color: #f4f7fb !important;
-}
-.catalogo-destaques .destaque-icone {
-  display: grid;
-  place-items: center;
-  flex: 0 0 68px;
-  width: 68px;
-  height: 68px;
-  border: 2px solid #0785ff;
-  border-radius: 19px;
-  background: #0b1728;
-  color: #0785ff;
-  font-size: 30px;
-  box-shadow: 0 0 18px rgba(7,133,255,.08);
-}
-.catalogo-destaques strong {
-  display: block;
-  color: #f4f7fb !important;
-  font-size: 18px;
-  line-height: 1.35;
-  font-weight: 750;
-}
-.catalogo-destaques small {
-  display: block;
-  margin-top: 8px;
-  color: #d0d9e6 !important;
-  font-size: 14px;
-  line-height: 1.45;
-}
-@media (max-width: 800px) {
-  .catalogo-destaques { padding: 26px 0; }
-  .catalogo-destaques-grade { gap: 14px; padding-inline: 20px !important; }
-  .catalogo-destaques-grade > div { justify-content: flex-start; gap: 14px; }
-  .catalogo-destaques .destaque-icone { flex-basis: 52px; width: 52px; height: 52px; border-radius: 15px; font-size: 24px; }
-  .catalogo-destaques strong { font-size: 13px; }
-  .catalogo-destaques small { margin-top: 4px; font-size: 10px; }
-}
-@media (max-width: 560px) {
-  .catalogo-destaques { padding: 20px 0; }
-  .catalogo-destaques-grade {
-    width: calc(100% - 28px) !important;
-    margin-inline: auto !important;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 20px !important;
-  }
-  .catalogo-destaques-grade > div { justify-content: flex-start; }
-  .catalogo-destaques .destaque-icone { flex-basis: 46px; width: 46px; height: 46px; }
-  .catalogo-destaques strong { font-size: 13px; }
-  .catalogo-destaques small { font-size: 10px; }
-}
