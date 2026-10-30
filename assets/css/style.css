@@ -517,3 +517,60 @@ select:focus-visible {
 .catalogo-resultado-topo .limpar-filtros {
   color: #168bff;
 }
+
+
+/* Correção final: remover áreas brancas do painel de filtros do catálogo */
+.catalogo-pagina,
+.catalogo-pagina .catalogo-explorar {
+  background: #080f1a !important;
+  color: #f4f7fb !important;
+}
+.catalogo-pagina .catalogo-painel-filtros {
+  background: #101a29 !important;
+  background-color: #101a29 !important;
+  color: #f4f7fb !important;
+  border: 1px solid #243650 !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .28) !important;
+}
+.catalogo-pagina .catalogo-painel-filtros .campo-busca,
+.catalogo-pagina .catalogo-painel-filtros .campo-busca-grande,
+.catalogo-pagina .catalogo-painel-filtros select {
+  background: #0b1422 !important;
+  background-color: #0b1422 !important;
+  color: #f4f7fb !important;
+  border-color: #2a3d58 !important;
+}
+.catalogo-pagina .catalogo-painel-filtros input {
+  background: transparent !important;
+  color: #f4f7fb !important;
+  -webkit-text-fill-color: #f4f7fb;
+}
+.catalogo-pagina .catalogo-painel-filtros input::placeholder {
+  color: #91a2b9 !important;
+  opacity: 1;
+}
+.catalogo-pagina .catalogo-painel-filtros kbd {
+  background: #101a29 !important;
+  color: #b8c5d6 !important;
+  border-color: #2a3d58 !important;
+}
+.catalogo-pagina .catalogo-painel-filtros .filtro {
+  background: #0b1422 !important;
+  color: #b8c5d6 !important;
+  border-color: #344760 !important;
+}
+.catalogo-pagina .catalogo-painel-filtros .filtro.ativo,
+.catalogo-pagina .catalogo-painel-filtros .filtro:hover {
+  background: #087eff !important;
+  color: #fff !important;
+  border-color: #087eff !important;
+}
+.catalogo-pagina .catalogo-painel-filtros .ordenar-controle,
+.catalogo-pagina .catalogo-painel-filtros .ordenar-controle span,
+.catalogo-pagina .catalogo-resultado-topo {
+  color: #aab7c8 !important;
+}
+.catalogo-pagina .catalogo-painel-filtros select option {
+  background: #0b1422 !important;
+  color: #f4f7fb !important;
+}
