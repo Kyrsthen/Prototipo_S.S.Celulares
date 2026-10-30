@@ -5,6 +5,16 @@ const produtos = [
   {id:"cabo-usb",nome:"Cabo para carregamento",categoria:"Energia",classe:"acessorio",cor:"black",descricao:"Exemplo de cabo para dispositivos compatíveis.",preco:24.90,acessorio:true},
   {id:"fone-ouvido",nome:"Fone de ouvido",categoria:"Áudio",classe:"acessorio",cor:"black",descricao:"Exemplo de acessório de áudio. Consulte versões disponíveis.",preco:89.90,acessorio:true},
   {id:"caixa-som",nome:"Caixinha de som",categoria:"Áudio",classe:"acessorio",cor:"blue",descricao:"Exemplo de caixa de som portátil. Consulte disponibilidade.",preco:119.90,acessorio:true}
+,
+
+  {id:"xiaomi-redmi-note-13",nome:"Redmi Note 13",categoria:"Xiaomi",classe:"intermediario",cor:"blue",descricao:"Tela AMOLED de 6,67 pol. · 128 GB · 6 GB RAM · Câmera principal de 108 MP.",preco:1299.90,celular:true},
+  {id:"xiaomi-poco-x6-pro",nome:"POCO X6 Pro",categoria:"Xiaomi",classe:"premium",cor:"black",descricao:"Tela AMOLED de 6,67 pol. · 256 GB · 8 GB RAM · Conectividade 5G.",preco:2099.90,celular:true},
+  {id:"motorola-moto-g84",nome:"Moto G84 5G",categoria:"Motorola",classe:"intermediario",cor:"purple",descricao:"Tela pOLED de 6,5 pol. · 256 GB · 8 GB RAM · Câmera de 50 MP.",preco:1499.90,celular:true},
+  {id:"motorola-edge-40-neo",nome:"Edge 40 Neo",categoria:"Motorola",classe:"premium",cor:"blue",descricao:"Tela pOLED de 6,55 pol. · 256 GB · 8 GB RAM · Resistência à água.",preco:1899.90,celular:true},
+  {id:"iphone-13",nome:"iPhone 13",categoria:"iPhone",classe:"premium",cor:"gold",descricao:"Tela Super Retina XDR de 6,1 pol. · 128 GB · Câmera dupla.",preco:3299.90,celular:true},
+  {id:"iphone-15",nome:"iPhone 15",categoria:"iPhone",classe:"premium",cor:"purple",descricao:"Tela Super Retina XDR de 6,1 pol. · 128 GB · USB-C · Câmera de 48 MP.",preco:4499.90,celular:true},
+  {id:"samsung-galaxy-a55",nome:"Galaxy A55 5G",categoria:"Samsung",classe:"intermediario",cor:"blue",descricao:"Tela Super AMOLED de 6,6 pol. · 128 GB · 8 GB RAM · Câmera tripla.",preco:2199.90,celular:true},
+  {id:"samsung-galaxy-s24",nome:"Galaxy S24",categoria:"Samsung",classe:"premium",cor:"black",descricao:"Tela Dynamic AMOLED 2X de 6,2 pol. · 256 GB · 8 GB RAM · 5G.",preco:4299.90,celular:true}
 ];
 
 const CHAVE_CARRINHO = "ss-celulares-carrinho-v1";
@@ -144,11 +154,13 @@ function desenharProdutos() {
   const contador = document.querySelector("#contador-produtos");
   if (!lista || !busca || !contador) return;
   const filtros = [...document.querySelectorAll("[data-categoria]")];
+  const somenteCelulares = Boolean(document.querySelector(".celulares-vitrine"));
   const categoriaAtiva = filtros.find(botao => botao.getAttribute("aria-pressed") === "true")?.dataset.categoria || "Todos";
   const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
   let encontrados = produtos.filter(produto =>
+    (!somenteCelulares || produto.celular) &&
     (categoriaAtiva === "Todos" || produto.categoria === categoriaAtiva) &&
-    (produto.nome.toLocaleLowerCase("pt-BR").includes(termo) || produto.descricao.toLocaleLowerCase("pt-BR").includes(termo))
+    (produto.nome.toLocaleLowerCase("pt-BR").includes(termo) || produto.categoria.toLocaleLowerCase("pt-BR").includes(termo) || produto.descricao.toLocaleLowerCase("pt-BR").includes(termo))
   );
   const ordenar = document.querySelector("#ordenar-produtos")?.value || "relevancia";
   if (ordenar === "preco-menor") encontrados.sort((a,b) => a.preco-b.preco);
@@ -191,7 +203,7 @@ function desenharProdutos() {
     const rodape = document.createElement("div"); rodape.className = "produto-rodape";
     const preco = document.createElement("strong");
     preco.className = "produto-preco"; preco.textContent = dinheiro(produto.preco);
-    const legenda = document.createElement("small"); legenda.textContent = "preço ilustrativo";
+    const legenda = document.createElement("small"); legenda.textContent = "preço demonstrativo";
     preco.append(legenda);
     const adicionar = document.createElement("button");
     adicionar.type = "button"; adicionar.className = "adicionar-carrinho";
