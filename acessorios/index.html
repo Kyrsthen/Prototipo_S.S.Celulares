@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore acessórios demonstrativos para celulares."><title>Acessórios | SS Celulares</title><link rel="stylesheet" href="../assets/css/style.css"></head><body><a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a><header class="topo topo-padrao">
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore acessórios demonstrativos para celulares."><title>Acessórios | SS Celulares</title><link rel="stylesheet" href="../assets/css/style.css"><script src="../assets/js/catalogo.js" defer></script></head><body><a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a><header class="topo topo-padrao">
     <div class="container barra">
       <a class="marca" href="../index.html" aria-label="SS Celulares — início">
         <span class="marca-simbolo home-marca-simbolo">SS</span>
@@ -21,4 +21,46 @@
         </a>
       </div>
     </div>
-  </header><main id="conteudo" class="pagina-conteudo"><div class="container"><p class="sobretitulo">ACESSÓRIOS</p><h1>Pequenos detalhes, <span>mais praticidade.</span></h1><p class="pagina-intro">Capinhas, carregadores, fones de ouvido, caixinhas de som e outros acessórios para o dia a dia.</p><div class="pagina-cards"><article><span>🎧</span><h2>Fones de ouvido</h2><p>Opções com fio e sem fio para música, vídeos e chamadas.</p></article><article><span>🛡️</span><h2>Capas e películas</h2><p>Acessórios para ajudar a proteger seu aparelho no dia a dia.</p></article><article><span>🔌</span><h2>Carregadores e cabos</h2><p>Consulte modelos compatíveis com seu celular.</p></article><article><span>▣</span><h2>Caixinhas de som</h2><p>Opções de áudio para diferentes usos. Consulte os modelos disponíveis.</p></article></div><a class="botao botao-principal" href="../catalogo/index.html">Ver itens do catálogo →</a><p class="aviso-catalogo">Os exemplos representam categorias mencionadas no material do projeto. Confirme modelos e disponibilidade diretamente com a loja.</p></div></main><footer class="rodape rodape-global"><div class="container rodape-padrao"><a class="marca" href="../index.html"><span class="marca-simbolo home-marca-simbolo">SS</span><span class="home-marca-texto">S.S <b>Celulares</b><small>ASSISTÊNCIA TÉCNICA EM SMARTPHONES</small></span></a><nav class="rodape-links" aria-label="Links do rodapé"><a href="../celulares/index.html">Celulares</a><a href="../acessorios/index.html">Acessórios</a><a href="../assistencia/index.html">Assistência Técnica</a><a href="../sobre/index.html">Sobre Nós</a><a href="../contato/index.html">Contato</a></nav><div class="rodape-final"><span>© <span class="ano-atual"></span> S.S. Celulares · Protótipo</span><a href="#conteudo">Voltar ao topo ↑</a></div></div></footer><script>document.querySelectorAll(".ano-atual").forEach(el=>el.textContent=new Date().getFullYear())</script></body></html>
+  </header><main id="conteudo" class="catalogo-pagina">
+  <section class="catalogo-hero">
+    <div class="container catalogo-hero-grade">
+      <div class="catalogo-hero-texto">
+        <p class="sobretitulo"><span class="ponto"></span> ACESSÓRIOS S.S. CELULARES</p>
+        <h1>Detalhes que fazem a <span>diferença no dia a dia.</span></h1>
+        <p>Explore exemplos de capinhas, películas, carregadores, cabos, fones e caixinhas de som.</p>
+        <a class="botao botao-principal" href="#explorar">Ver acessórios <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="catalogo-hero-selo" aria-hidden="true"><div class="catalogo-orbita"></div><div class="catalogo-aparelho"><div></div></div><span class="catalogo-flutuante">SS / ACESSÓRIOS</span></div>
+    </div>
+  </section>
+  <section class="catalogo-destaques" aria-label="Informações sobre os acessórios">
+    <div class="container catalogo-destaques-grade">
+      <div><span class="destaque-icone">⌕</span><span><strong>Várias categorias</strong><small>Proteção, energia e áudio</small></span></div>
+      <div><span class="destaque-icone">▤</span><span><strong>Preços demonstrativos</strong><small>Valores apenas para o protótipo</small></span></div>
+      <div><span class="destaque-icone">🛒</span><span><strong>Carrinho integrado</strong><small>Adicione itens para testar</small></span></div>
+    </div>
+  </section>
+  <section class="catalogo-explorar" id="explorar">
+    <div class="container">
+      <div class="catalogo-cabecalho">
+        <div><p class="sobretitulo">VITRINE DE ACESSÓRIOS</p><h2>Encontre o que precisa para <span>seu aparelho.</span></h2><p class="texto-secundario">Pesquise, filtre e ordene os exemplos de produtos abaixo.</p></div>
+        <span class="contador" id="contador-produtos" aria-live="polite">Carregando produtos...</span>
+      </div>
+      <div class="catalogo-painel-filtros">
+        <label class="campo-busca campo-busca-grande"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar capinha, carregador, fone..." aria-label="Buscar acessórios por nome ou descrição"><kbd>⌕</kbd></label>
+        <div class="catalogo-filtros-linha">
+          <div class="categorias" role="group" aria-label="Filtrar por categoria">
+            <button class="filtro ativo" type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-categoria="Proteção" aria-pressed="false">Proteção</button>
+            <button class="filtro" type="button" data-categoria="Energia" aria-pressed="false">Energia</button>
+            <button class="filtro" type="button" data-categoria="Áudio" aria-pressed="false">Áudio</button>
+          </div>
+          <label class="ordenar-controle"><span>Ordenar por</span><select id="ordenar-produtos" aria-label="Ordenar acessórios"><option value="relevancia">Recomendados</option><option value="preco-menor">Menor preço</option><option value="preco-maior">Maior preço</option><option value="nome">Nome A–Z</option></select></label>
+        </div>
+      </div>
+      <div class="catalogo-resultado-topo"><span id="resumo-resultados">Acessórios demonstrativos</span><button id="limpar-filtros" class="limpar-filtros" type="button">Limpar filtros ↺</button></div>
+      <div class="produtos produtos-catalogo" id="lista-produtos" aria-live="polite"></div>
+      <div class="catalogo-nota"><span aria-hidden="true">ⓘ</span><p><strong>Atenção: valores demonstrativos</strong><br>Os produtos, descrições e preços desta vitrine são exemplos para apresentação do protótipo e não representam oferta ou estoque confirmado. Consulte a loja para verificar modelos, compatibilidade, disponibilidade e preços reais.</p></div>
+    </div>
+  </section>
+</main><footer class="rodape rodape-global"><div class="container rodape-padrao"><a class="marca" href="../index.html"><span class="marca-simbolo home-marca-simbolo">SS</span><span class="home-marca-texto">S.S <b>Celulares</b><small>ASSISTÊNCIA TÉCNICA EM SMARTPHONES</small></span></a><nav class="rodape-links" aria-label="Links do rodapé"><a href="../celulares/index.html">Celulares</a><a href="../acessorios/index.html">Acessórios</a><a href="../assistencia/index.html">Assistência Técnica</a><a href="../sobre/index.html">Sobre Nós</a><a href="../contato/index.html">Contato</a></nav><div class="rodape-final"><span>© <span class="ano-atual"></span> S.S. Celulares · Protótipo</span><a href="#conteudo">Voltar ao topo ↑</a></div></div></footer><script>document.querySelectorAll(".ano-atual").forEach(el=>el.textContent=new Date().getFullYear())</script></body></html>
