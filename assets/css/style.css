@@ -457,3 +457,63 @@ select:focus-visible {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+
+/* Catálogo: painel de filtros integrado ao tema escuro */
+.catalogo-painel-filtros {
+  background: #101a29 !important;
+  border: 1px solid #243650 !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .22) !important;
+  color: #f4f7fb;
+}
+.catalogo-painel-filtros .campo-busca,
+.catalogo-painel-filtros .campo-busca-grande {
+  background: #0b1422;
+  border: 1px solid #2a3d58;
+  color: #f4f7fb;
+}
+.catalogo-painel-filtros .campo-busca input {
+  background: transparent;
+  color: #f4f7fb;
+  caret-color: #0785ff;
+}
+.catalogo-painel-filtros .campo-busca input::placeholder {
+  color: #91a2b9;
+  opacity: 1;
+}
+.catalogo-painel-filtros .campo-busca kbd {
+  background: #101a29;
+  border-color: #2a3d58;
+  color: #b8c5d6;
+}
+.catalogo-painel-filtros .filtro {
+  background: #0b1422;
+  border: 1px solid #344760;
+  color: #b8c5d6;
+}
+.catalogo-painel-filtros .filtro.ativo,
+.catalogo-painel-filtros .filtro:hover {
+  background: #087eff;
+  border-color: #087eff;
+  color: #fff;
+}
+.catalogo-painel-filtros .ordenar-controle,
+.catalogo-painel-filtros .ordenar-controle span {
+  color: #9fb0c5;
+}
+.catalogo-painel-filtros .ordenar-controle select {
+  background-color: #0b1422;
+  border: 1px solid #344760;
+  color: #f4f7fb;
+  color-scheme: dark;
+}
+.catalogo-painel-filtros .ordenar-controle select option {
+  background: #0b1422;
+  color: #f4f7fb;
+}
+.catalogo-resultado-topo {
+  color: #aab7c8;
+}
+.catalogo-resultado-topo .limpar-filtros {
+  color: #168bff;
+}
