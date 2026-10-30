@@ -8,18 +8,37 @@ const produtos = [
 ];
 
 const CHAVE_CARRINHO = "ss-celulares-carrinho-v1";
-const dinheiro = valor => valor.toLocaleString("pt-BR", {style:"currency",currency:"BRL"});
+const QUANTIDADE_MAXIMA = 99;
+let carrinhoTemporario = [];
+const dinheiro = valor => Number(valor || 0).toLocaleString("pt-BR", {style:"currency",currency:"BRL"});
 
+function normalizarCarrinho(dados) {
+  if (!Array.isArray(dados)) return [];
+  return dados
+    .filter(item => item && typeof item.id === "string" &&
+      produtos.some(produto => produto.id === item.id) &&
+      Number.isSafeInteger(item.quantidade) &&
+      item.quantidade > 0 && item.quantidade <= QUANTIDADE_MAXIMA)
+    .map(item => ({id:item.id, quantidade:item.quantidade}));
+}
 function lerCarrinho() {
   try {
-    const dados = JSON.parse(localStorage.getItem(CHAVE_CARRINHO) || "[]");
-    return Array.isArray(dados) ? dados.filter(item => produtos.some(p => p.id === item.id) && Number.isInteger(item.quantidade) && item.quantidade > 0) : [];
+    const dados = localStorage.getItem(CHAVE_CARRINHO);
+    if (dados === null) return normalizarCarrinho(carrinhoTemporario);
+    const carrinho = normalizarCarrinho(JSON.parse(dados));
+    carrinhoTemporario = carrinho;
+    return carrinho;
   } catch {
-    return [];
+    return normalizarCarrinho(carrinhoTemporario);
   }
 }
 function salvarCarrinho(carrinho) {
-  try { localStorage.setItem(CHAVE_CARRINHO, JSON.stringify(carrinho)); } catch {}
+  carrinhoTemporario = normalizarCarrinho(carrinho);
+  try {
+    localStorage.setItem(CHAVE_CARRINHO, JSON.stringify(carrinhoTemporario));
+  } catch {
+    // O carrinho continua funcionando durante esta sessão se o navegador bloquear o armazenamento.
+  }
   atualizarIndicadoresCarrinho();
 }
 function quantidadeCarrinho() {
@@ -38,8 +57,14 @@ function adicionarAoCarrinho(id) {
   if (!produto) return;
   const carrinho = lerCarrinho();
   const existente = carrinho.find(item => item.id === id);
-  if (existente) existente.quantidade += 1;
-  else carrinho.push({id,quantidade:1});
+  if (existente) {
+    if (existente.quantidade >= QUANTIDADE_MAXIMA) {
+      const mensagemLimite = document.querySelector("#mensagem-carrinho");
+      if (mensagemLimite) mensagemLimite.textContent = "Limite de " + QUANTIDADE_MAXIMA + " unidades por produto no carrinho demonstrativo.";
+      return;
+    }
+    existente.quantidade += 1;
+  } else carrinho.push({id,quantidade:1});
   salvarCarrinho(carrinho);
   const mensagem = document.querySelector("#mensagem-carrinho");
   if (mensagem) mensagem.textContent = produto.nome + " adicionado ao carrinho.";
@@ -105,7 +130,7 @@ function alterarQuantidade(id,delta) {
   const carrinho = lerCarrinho();
   const item = carrinho.find(produto => produto.id === id);
   if (!item) return;
-  item.quantidade += delta;
+  item.quantidade = Math.min(QUANTIDADE_MAXIMA, item.quantidade + delta);
   salvarCarrinho(carrinho.filter(produto => produto.quantidade > 0));
   desenharCarrinho();
 }
@@ -219,3 +244,13 @@ if (ano) ano.textContent = new Date().getFullYear();
 desenharProdutos();
 desenharCarrinho();
 atualizarIndicadoresCarrinho();
+
+
+// Mantém o carrinho e o contador sincronizados quando outra aba altera os itens.
+window.addEventListener("storage", evento => {
+  if (evento.key === CHAVE_CARRINHO || evento.key === null) {
+    carrinhoTemporario = lerCarrinho();
+    desenharCarrinho();
+    atualizarIndicadoresCarrinho();
+  }
+});
