@@ -1,10 +1,10 @@
 const produtos = [
-  {id:"aurora-pro",nome:"Smartphone Aurora Pro",categoria:"Premium",classe:"premium",cor:"purple",descricao:"Tela imersiva e recursos para fotos e vídeos.",preco:3899.90},
-  {id:"nova-x",nome:"Smartphone Nova X",categoria:"Premium",classe:"premium",cor:"black",descricao:"Desempenho para multitarefas e entretenimento.",preco:3299.90},
-  {id:"essencial",nome:"Smartphone Essencial",categoria:"Intermediário",classe:"intermediario",cor:"green",descricao:"Uma opção versátil para a rotina.",preco:1499.90},
-  {id:"connect",nome:"Smartphone Connect",categoria:"Intermediário",classe:"intermediario",cor:"blue",descricao:"Equilíbrio entre recursos e praticidade.",preco:1199.90},
-  {id:"fone-sem-fio",nome:"Fone sem fio",categoria:"Acessório",classe:"acessorio",cor:"black",descricao:"Acessório demonstrativo para ouvir seus conteúdos.",preco:189.90,acessorio:true},
-  {id:"classic",nome:"Smartphone Classic",categoria:"Intermediário",classe:"intermediario",cor:"gold",descricao:"Uma alternativa simples para tarefas do dia a dia.",preco:899.90}
+  {id:"capinha-universal",nome:"Capinha para celular",categoria:"Proteção",classe:"acessorio",cor:"black",descricao:"Exemplo de capa protetora. Consulte modelos compatíveis.",preco:49.90,acessorio:true},
+  {id:"pelicula-protecao",nome:"Película de proteção",categoria:"Proteção",classe:"acessorio",cor:"blue",descricao:"Exemplo de película. Confirme a compatibilidade com seu aparelho.",preco:29.90,acessorio:true},
+  {id:"carregador-usb",nome:"Carregador",categoria:"Energia",classe:"acessorio",cor:"white",descricao:"Exemplo de carregador. Consulte potência e compatibilidade.",preco:79.90,acessorio:true},
+  {id:"cabo-usb",nome:"Cabo para carregamento",categoria:"Energia",classe:"acessorio",cor:"black",descricao:"Exemplo de cabo para dispositivos compatíveis.",preco:24.90,acessorio:true},
+  {id:"fone-ouvido",nome:"Fone de ouvido",categoria:"Áudio",classe:"acessorio",cor:"black",descricao:"Exemplo de acessório de áudio. Consulte versões disponíveis.",preco:89.90,acessorio:true},
+  {id:"caixa-som",nome:"Caixinha de som",categoria:"Áudio",classe:"acessorio",cor:"blue",descricao:"Exemplo de caixa de som portátil. Consulte disponibilidade.",preco:119.90,acessorio:true}
 ];
 
 const CHAVE_CARRINHO = "ss-celulares-carrinho-v1";
